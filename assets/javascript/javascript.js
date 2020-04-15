@@ -1,13 +1,17 @@
 
 // These are my prompts and confirms
-var characters = prompt("How many characters do you want? (Must be between 8 and 128)");
+var characters = 0
+while (characters < 8 || characters > 128 || characters != typeof(number)) {
+    var characters = prompt("How many characters do you want? (Must be between 8 and 128)");
     if (characters < 8) {
         alert("That is too short! Must be 8 or more.");
     } else if (characters > 128) {
         alert("That is too long!  Must be no more than 128.");
-    } else {
-        
+    } else if (characters != typeof(number)) {
+        alert("Not a number.");
     }
+}
+
 
 var specialCharacters =  confirm("click OK to confirm including special characters (!@#$%^&*)");
 var numbers = confirm("Click OK to confirm including numbers");
