@@ -2,21 +2,11 @@
     font-family: 'Russo One', sans-serif;
 }
 
-body {
-    
-}
-
 .container {
+    padding: 60px;
     margin:50px auto 100px auto;
     justify-content: center;
-}
-
-.main-section {
-    /* margin: 20px; */
-    border: 2px black solid;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid black;
 }
 
 .text {
@@ -27,19 +17,20 @@ body {
 
 h1 {
     text-align: center;
-    
+    border-bottom: 3px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .password-box {
     padding: 50px;
     border: 5px gray dashed;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .btn {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
 }
