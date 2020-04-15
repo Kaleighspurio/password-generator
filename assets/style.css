@@ -1,0 +1,45 @@
+* {
+    font-family: 'Russo One', sans-serif;
+}
+
+body {
+    
+}
+
+.container {
+    margin:50px auto 100px auto;
+    justify-content: center;
+}
+
+.main-section {
+    /* margin: 20px; */
+    border: 2px black solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+.password-box {
+    padding: 50px;
+    border: 5px gray dashed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
