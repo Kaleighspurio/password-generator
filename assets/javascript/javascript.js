@@ -24,9 +24,17 @@ passwordButton.addEventListener("click", function(event) {
     } else {
         alert("That will not work. Please enter a number between 8 and 128. Click Generate Passwork again.");
     };
+
+    
+
+    if (specialCharacters == true && numbers == true && lowerCase == true && upperCase == true) {
+        var passwordArray = specials.concat(nums, lowers, uppers);
+        console.log(passwordArray);
+    }
+    
     var randomPassword = " ";
     for (i = 0; i < characters; i++) { 
-        newCharacter = specials[Math.floor(Math.random() * specials.length)];
+        newCharacter = passwordArray[Math.floor(Math.random() * passwordArray.length)];
         randomPassword = randomPassword + newCharacter;
     }
     console.log(randomPassword);
@@ -42,3 +50,7 @@ passwordButton.addEventListener("click", function(event) {
 // } 
 // generatePassword(specialCharacters, numbers, lowerCase, upperCase);
 
+// if (specialCharacters == true && numbers == true && lowerCase == true && upperCase == true) {
+//     var passwordArray = specials.concat(numbers, lowerCase, upperCase);
+//     console.log(passwordArray);
+// }
