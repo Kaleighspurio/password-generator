@@ -25,6 +25,7 @@ passwordButton.addEventListener("click", function(event) {
         alert("That will not work. Please click Generate Password again and enter a number between 8 and 128.");
     };
 
+    // These if/else concatinate the appropriate arrays together into one large array to draw characters from.
     if (specialCharacters == true) {
         var passwordArray = specialsArray;
     } else {
@@ -54,14 +55,12 @@ passwordButton.addEventListener("click", function(event) {
         passwordArray = passwordArray;
     }
 
+    if (specialCharacters == false && numbers == false && lowerCase == false && upperCase == false) {
+        alert("You must confirm at least one type of character.  Please click 'Generate Password' to try again.")
+    }
+
     console.log(passwordArray);
-
-
-    // if (specialCharacters == true && numbers == true && lowerCase == true && upperCase == true) {
-    //     var passwordArray = specialsArray.concat(numsArray, lowersArray, uppersArray);
-    //     console.log(passwordArray);
-    // }
-    
+    // This will loop through the array to randomly select items and add them together to a length equal to what the user specified in the prompt.
     var randomPassword = " ";
     for (i = 0; i < characters; i++) { 
         newCharacter = passwordArray[Math.floor(Math.random() * passwordArray.length)];
