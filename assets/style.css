@@ -2,6 +2,10 @@
     font-family: 'Russo One', sans-serif;
 }
 
+body {
+    background-color: darkgray;
+}
+
 .container {
     padding: 60px;
     margin:50px auto 100px auto;
@@ -23,14 +27,25 @@ h1 {
 }
 
 .password-box {
-    padding: 50px;
-    border: 5px gray dashed;
+    padding: 50px 30px;
+    border: 5px black dashed;
     display: block;
     margin: 10px auto;
     text-align: center;
+    background-color: slategray;
+    color:darkred;
 }
 
 .btn {
     display: block;
     margin: 30px auto;
+}
+
+.paragraph {
+    text-align: center;
+    padding: 15px;
+}
+
+.password {
+    color: white;
 }

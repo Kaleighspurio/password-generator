@@ -28,7 +28,7 @@ passwordButton.addEventListener("click", function(event) {
     if (specialCharacters == true) {
         var passwordArray = specialsArray;
     } else {
-        var passwordArray = [""]
+        var passwordArray = [];
     }
 
     console.log(passwordArray);
