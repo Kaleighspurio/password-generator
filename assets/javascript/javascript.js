@@ -1,6 +1,12 @@
 const passwordButton = document.querySelector(".password-btn");
 const passwordOutput =  document.querySelector(".password");
 
+const charactersInput = document.querySelector("#character-input");
+const specialsInput = document.querySelector("#special-characters");
+const numbersInput = document.querySelector("#numbers");
+const lowercaseInput = document.querySelector("#lowercase");
+const uppercaseInput = document.querySelector("#uppercase");
+
 const specialsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", "~"];
 const numsArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const lowersArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -10,29 +16,18 @@ const uppersArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 // this bring up a prompt when the button is clicked, and asks the user what characters they want in the password
 passwordButton.addEventListener("click", (event) => {
     // let characters = prompt("How many characters do you want? (Must be between 8 and 128)");
-    let specialCharacters;
-    let numbers;
-    let lowerCase;
-    let upperCase
-    characters = parseInt(characters);
-    console.log(characters);
-    if (characters >= 8 && characters <= 128) {
-        specialCharacters =  confirm("click OK to confirm including special characters (!@#$%^&*)");
-        numbers = confirm("Click OK to confirm including numbers");
-        lowerCase = confirm("Click OK to confirm including lower case letters");
-        upperCase = confirm("Click Ok to confirm including upper case letters");
-        console.log(specialCharacters);
-        console.log(numbers);
-        console.log(lowerCase);
-        console.log(upperCase);
-    } else {
-        alert("That will not work. Please click Generate Password again and enter a number between 8 and 128.");
+
+    // get the value from the character length input
+    let characters = parseInt(charactersInput.value);
+    console.log(charactersInput.value);
+    if (characters < 8 || characters > 128) {
+        alert("That will not work. Please enter a number between 8 and 128 for the password length.");
         return;
-    };
+    }
 
     // These if/else concatinate the appropriate arrays together into one large array to draw characters from.
     let passwordArray;
-    if (specialCharacters === true) {
+    if (specialsInput.checked) {
         passwordArray = specialsArray;
     } else {
         passwordArray = [];
@@ -40,28 +35,22 @@ passwordButton.addEventListener("click", (event) => {
 
     console.log(passwordArray);
 
-    if (numbers === true) {
+    if (numbersInput.checked) {
         passwordArray = passwordArray.concat(numsArray);
         console.log(passwordArray);
-    } else {
-        passwordArray = passwordArray;
-    }
+    } 
 
-    if (lowerCase === true) {
+    if (lowercaseInput.checked) {
         passwordArray = passwordArray.concat(lowersArray);
         console.log(passwordArray);
-    } else {
-        passwordArray = passwordArray;
-    }
+    } 
 
-    if (upperCase === true) {
+    if (uppercaseInput.checked) {
         passwordArray = passwordArray.concat(uppersArray);
         console.log(passwordArray);
-    } else {
-        passwordArray = passwordArray;
-    }
+    } 
 
-    if (specialCharacters === false && numbers === false && lowerCase === false && upperCase === false) {
+    if (specialsInput.unchecked && numbersInput.unchecked && lowercaseInput.unchecked && uppercaseInput.unchecked) {
         alert("You must confirm at least one type of character.  Please click 'Generate Password' to try again.");
         return;
     }
@@ -75,6 +64,5 @@ passwordButton.addEventListener("click", (event) => {
     }
     console.log(randomPassword);
     passwordOutput.textContent = randomPassword;
-    
 });
 

@@ -52,3 +52,7 @@ h1 {
     color: white;
     text-align: justify;
 }
+
+.modal-body {
+    margin: 10px;
+}
