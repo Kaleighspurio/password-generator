@@ -1,58 +1,60 @@
 * {
-    font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 
 body {
-    background-color: darkgray;
+  background-color: darkgray;
 }
 
 .container {
-    padding: 60px;
-    margin:50px auto 100px auto;
-    justify-content: center;
-    border: 1px solid black;
+  padding: 60px;
+  margin: 50px auto 100px auto;
+  justify-content: center;
+  border: 1px solid black;
 }
 
 .text {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-    text-align: center;
-    border-bottom: 3px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: darkred;
-    color: white
+  text-align: center;
+  border-bottom: 3px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: darkred;
+  color: white;
 }
 
 .password-box {
-    padding: 50px 30px;
-    border: 5px black dashed;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    background-color: slategray;
-    color:darkred;
+  padding: 50px 30px;
+  border: 5px black dashed;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  background-color: slategray;
+  color: darkred;
 }
 
 .btn {
-    display: block;
-    margin: 30px auto;
+  display: block;
+  margin: 30px auto;
+  color: black;
+}
+
+.btn:hover {
+  background-color: darkred;
+  color: white;
 }
 
 .paragraph {
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 15px;
 }
 
 .password {
-    color: white;
-    text-align: justify;
-}
-
-.modal-body {
-    margin: 10px;
+  color: white;
+  text-align: justify;
 }
