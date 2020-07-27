@@ -1,4 +1,4 @@
-const passwordButton = document.querySelector(".btn");
+const passwordButton = document.querySelector(".password-btn");
 const passwordOutput =  document.querySelector(".password");
 
 const specialsArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", "~"];
@@ -9,7 +9,7 @@ const uppersArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 
 // this bring up a prompt when the button is clicked, and asks the user what characters they want in the password
 passwordButton.addEventListener("click", (event) => {
-    let characters = prompt("How many characters do you want? (Must be between 8 and 128)");
+    // let characters = prompt("How many characters do you want? (Must be between 8 and 128)");
     let specialCharacters;
     let numbers;
     let lowerCase;
