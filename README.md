@@ -18,3 +18,6 @@ Clone the repository and run with the live server.
 
 34 character password with special characters and lowercase letters
 ![34 character password with special characters and lowercase letters](assets/images/Screen%20Shot%202020-07-27%20at%202.57.37%20PM.png)
+
+### Technologies Used
+Javascript, HTML5, CSS, Bootstrap, Google Fonts
